@@ -1,0 +1,18 @@
+data: &data 
+  haha: 23333
+
+single: &single
+  !include single_conf.yml
+
+another: &another
+  !include another_conf.yml
+
+# 这个会失败，因为multiple_conf.yml里实际上装了两份配置
+# muitiple: &muitiple
+#   !include multiple_conf.yml
+
+database_conf:
+  - <<: *data
+  - *single  # 必须作为列表引入
+  - *another
+  - greet: this is include_conf.yml

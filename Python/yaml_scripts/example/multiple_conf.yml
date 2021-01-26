@@ -1,0 +1,7 @@
+# 分段yaml文件中多个文档
+---
+animal1: dog
+age: 2
+---
+animal2: cat
+age: 3
