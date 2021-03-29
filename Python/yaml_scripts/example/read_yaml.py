@@ -2,7 +2,7 @@
 # *·@Author: Wei Chen (chenwei@yusur.tech)
 # *·@date: 2021-01-20 14:27:53
 # *·@last_author: Wei Chen (chenwei@yusur.tech)
-# *·@last_edit_time: 2021-01-20 20:50:15
+# *·@last_edit_time: 2021-02-03 14:53:08
 ####
 
 import os
@@ -18,6 +18,9 @@ def load_single_yml(filename):
         yaml_data = fd.read()
         data = yaml.load(yaml_data, Loader=yaml.FullLoader)
         print(data)
+        print("data:", data["empty_str"], "type:", type(data["empty_str"]))
+        print("---")
+        sys.exit(0)
     
 
 def load_multiple_yml(filename):
@@ -105,7 +108,7 @@ if __name__ == "__main__":
     os.chdir(sys.path[0])
     
     filename = "single_conf.yml"
-    # load_single_yml(filename)
+    load_single_yml(filename)
 
     filename = "multiple_conf.yml"
     # load_multiple_yml(filename)

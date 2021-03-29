@@ -2,7 +2,7 @@
 Author: Wei Chen (chenwei@yusur.tech)
 date: 2021-01-16 10:52:50
 last_author: Wei Chen (chenwei@yusur.tech)
-last_edit_time: 2021-01-16 10:52:51
+last_edit_time: 2021-03-02 20:38:25
 '''
 import os
 import sys
@@ -77,7 +77,7 @@ def change_yml_port(fn):
             print("change port to:", aim_port)
 
             ymlFile.seek(0)  # rewind
-            yaml.dump(data, ymlFile, allow_unicode=True)
+            yaml.dump(data, ymlFile, allow_unicode=True, default_flow_style=False, sort_keys=False)
             ymlFile.truncate()
 
     except Exception as e:

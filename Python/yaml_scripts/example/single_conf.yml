@@ -2,3 +2,6 @@ animal1:
   - butterfly
   - tiger
 age: 20
+
+empty_list: []
+empty_str: ""
